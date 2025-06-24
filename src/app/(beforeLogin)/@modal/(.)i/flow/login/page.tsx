@@ -1,6 +1,8 @@
+// 링크를 통한 접근 시 실행 intercepting route
+
 "use client";
 
-import style from '@/app/(beforeLogin)/@modal/i/flow/login/login.module.css';
+import style from '@/app/(beforeLogin)/@modal/(.)i/flow/login/login.module.css';
 import {useState} from "react";
 
 export default function LoginModal() {
