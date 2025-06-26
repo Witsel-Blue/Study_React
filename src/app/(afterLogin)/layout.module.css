@@ -122,6 +122,9 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .container {
+        padding: 0 16px;
+    }
     .leftSectionFixed {
         width: calc((100% - 16px) * 1 / 4); 
     }
