@@ -5,6 +5,8 @@ import Image from 'next/image';
 import ZLogo from '../../../public/zlogo.png';
 import NavMenu from './_component/NavMenu';
 import LogoutButton from './_component/LogoutButton'
+import TrendSection from './_component/Trendsection';
+import FollowRecommend from './_component/FollowRecommend';
 
 export default async function AfterLoginLayout({ children }: { children: ReactNode }) {
     return (
@@ -42,6 +44,8 @@ export default async function AfterLoginLayout({ children }: { children: ReactNo
                             </svg>
                             <input type='search' />
                         </form>
+                        <TrendSection />
+                        <FollowRecommend />
                     </section>
                 </div>
             </div>
