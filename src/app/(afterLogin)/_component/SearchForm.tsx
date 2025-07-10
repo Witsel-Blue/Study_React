@@ -2,7 +2,7 @@ import style from "@/app/(afterLogin)/_component/rightSearchZone.module.css";
 
 type Props = {
     q?: string;
-    pageName?: 'explore';
+    pageName?: 'explore' | 'search';
 }
 
 export default function SearchForm({ q, pageName }: Props) {
