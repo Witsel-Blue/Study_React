@@ -64,7 +64,9 @@ export default function Post({ noImage }: Props) {
                                 href={`/${target.User.id}/status/${target.postId}/photo/${target.Images[0].imageId}`}
                                 className={style.postImageSection}
                             >
-                                <img src={target.Images[0]?.link} alt='' />
+                                <div>
+                                    <img src={target.Images[0]?.link} alt='' />
+                                </div>
                             </Link>
                         )}
                     </div>
