@@ -10,8 +10,11 @@ import PostArticle from './PostArticle';
 dayjs.locale('ko');
 dayjs.extend(relativeTime)
 
+type Props = {
+    noImage?: boolean
+}
 
-export default function Post() {
+export default function Post({ noImage }: Props) {
     const target = {
         postId: 1,
         User: {
@@ -24,7 +27,7 @@ export default function Post() {
         Images: [] as any[],
     }
 
-    if (Math.random() > 0.5) {
+    if (Math.random() > 0.5 && !noImage) {
         target.Images.push(
             { imageId: 1, link: faker.image.urlLoremFlickr() },
             { imageId: 2, link: faker.image.urlLoremFlickr() },
