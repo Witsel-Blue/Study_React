@@ -12,6 +12,7 @@
     border-bottom-style: solid;
     position: fixed;
     width: calc((1024px) * 2 / 4);
+    height: 113px;
     z-index: 100;
 }
 
@@ -25,6 +26,9 @@
 .searchZone {
     display: flex;
     height: 60px;
+    border-color: rgb(239, 243, 244);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
 }
 
 .backButton {
@@ -57,11 +61,6 @@
     width: 100%;
     position: fixed;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(12px);
-    border-color: rgb(239, 243, 244);
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
 }
 
 .homeTab {
