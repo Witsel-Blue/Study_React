@@ -6,6 +6,7 @@ import 'dayjs/locale/ko';
 import { faker } from '@faker-js/faker';
 import ActionButtons from "@/app/(afterLogin)/_component/ActionButtons";
 import PostArticle from './PostArticle';
+import PostImages from "@/app/(afterLogin)/_component/PostImages";
 
 dayjs.locale('ko');
 dayjs.extend(relativeTime)
@@ -59,16 +60,7 @@ export default function Post({ noImage }: Props) {
                     </div>
                     <div>{target.content}</div>
                     <div>
-                        {target.Images && target.Images.length > 0 && (
-                            <Link
-                                href={`/${target.User.id}/status/${target.postId}/photo/${target.Images[0].imageId}`}
-                                className={style.postImageSection}
-                            >
-                                <div>
-                                    <img src={target.Images[0]?.link} alt='' />
-                                </div>
-                            </Link>
-                        )}
+                        <PostImages post={target} />
                     </div>
                     <ActionButtons />
                 </div>
