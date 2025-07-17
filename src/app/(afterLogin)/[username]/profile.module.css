@@ -9,7 +9,7 @@
     height: 53px;
     align-items: center;
     position: fixed;
-    width: calc(((1024px) * 2 / 4) - 2px);
+    width: calc(((1300px) * 2 / 4) - 2px);
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
@@ -18,9 +18,19 @@
     border-bottom-style: solid;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1300px) {
     .header {
         width: calc((100% - 16px) * 2 / 4 - 8px);
+    }
+}
+@media screen and (max-width: 1024px) {
+    .header {
+        width: calc((100% - 72px) * 2/3 - 11px);
+    }
+}
+@media screen and (max-width: 600px) {
+    .header {
+        width: calc(100% - 72px);
     }
 }
 

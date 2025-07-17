@@ -11,17 +11,26 @@
     border-bottom-width: 1px;
     border-bottom-style: solid;
     position: fixed;
-    width: calc((1024px) * 2 / 4);
+    width: calc((1300px) * 2 / 4);
     height: 113px;
     z-index: 100;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1300px) {
     .searchTop {
         width: calc((100% - 16px) * 2 / 4  - 8px);
     }
 }
-
+@media screen and (max-width: 1024px) {
+    .searchTop {
+        width: calc((100% - 72px) * 2/3 - 11px);
+    }
+}
+@media screen and (max-width: 600px) {
+    .searchTop {
+        width: calc(100% - 72px);
+    }
+}
 
 .searchZone {
     display: flex;

@@ -29,3 +29,9 @@
 .logOutUserName > div:first-child {
     font-weight: bold;
 }
+
+@media screen and (max-width: 1024px) {
+    .logOutUserName {
+        display: none;
+    }
+}

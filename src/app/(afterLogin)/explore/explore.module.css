@@ -7,6 +7,30 @@
 .formZone {
     padding-left: 16px;
     margin-bottom: 60px;
+    width: calc(((1300px) * 2 / 4) - 2px);
+    height: 60px;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border-color: rgb(239, 243, 244);
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+}
+@media screen and (max-width: 1300px) {
+    .formZone {
+        width: calc((100% - 16px) * 2 / 4 - 8px);
+    }
+}
+@media screen and (max-width: 1024px) {
+    .formZone {
+        width: calc((100% - 72px) * 2/3 - 11px);
+    }
+}
+@media screen and (max-width: 600px) {
+    .formZone {
+        width: calc(100% - 72px);
+    }
 }
 
 .trendBg {
@@ -14,7 +38,7 @@
     background-color: rgb(247, 249, 249);
 }
 .trend {
-    border-top: 1px solid rgb(239, 243, 244);
+    margin-top: 60px;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 12px;

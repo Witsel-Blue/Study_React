@@ -3,7 +3,7 @@
     grid-template-columns: 1fr 3fr;
     background-color: #fff;
     width: 100%;
-    max-width: 1024px;
+    max-width: 1300px;
     margin: auto;
 }
 
@@ -12,7 +12,7 @@
 }
 .leftSectionFixed {
     position: fixed;
-    width: calc((1024px) * 1 / 4);
+    width: calc((1300px) * 1 / 4);
     padding-right: 16px;
     height: 100dvh;
     display: flex;
@@ -20,12 +20,6 @@
     border-color: rgb(239, 243, 244);
     border-right-width: 1px;
     border-right-style: solid;
-}
-@media (prefers-color-scheme: dark) {
-    .leftSectionFixed {
-        background-color: rgba(0, 0, 0, 0.65);
-        border-color: rgb(47, 51, 54);
-    }
 }
 
 .leftSectionFixed nav {
@@ -40,7 +34,6 @@
     height: 56px;
     margin-top: 2px;
 }
-
 .logoPill {
     width: 50px;
     height: 50px;
@@ -67,9 +60,26 @@
     font-size: 17px;
     border-radius: 26px;
 }
-
 .postButton:hover {
     background-color: rgb(26, 140, 216);
+}
+.postButton svg {
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+    .postButton {
+        width: 50px;
+        height: 50px;
+    }
+    .postButton span {
+        display: none;
+    }
+    .postButton svg {
+        display: inline-block;
+        fill: #fff;
+        width: 24px;
+    }
 }
 
 .rightSectionWrapper {
@@ -94,13 +104,6 @@
     border-left-style: solid;
 }
 
-@media (prefers-color-scheme: dark) {
-    .rightSection {
-        background-color: rgba(0, 0, 0, 0.65);
-        border-color: rgb(47, 51, 54);
-    }
-}
-
 .followRecommend {
     font-size: 20px;
     font-weight: bold;
@@ -113,11 +116,35 @@
     padding-bottom: 12px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1300px) {
     .container {
         padding: 0 16px;
     }
     .leftSectionFixed {
         width: calc((100% - 16px) * 1 / 4 - 4px)
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        grid-template-columns: 72px auto;
+        padding: 0 16px 0 0;
+    }
+    .leftSectionFixed {
+        width: 72px;
+        padding-right: 0;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 0;
+    }
+    .rightSectionInner {
+        display: block;
+    }
+    .rightSection {
+        display: none;
     }
 }
