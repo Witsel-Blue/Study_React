@@ -61,10 +61,10 @@ export default function SignupModal() {
                                 <input id='image' name='image' required className={style.input} type='file' accept='image/*'
                                 />
                             </div>
+                            <div className={style.error}>{showMessage(state?.message)}</div>
                         </div>
                         <div className={style.modalFooter}>
                             <button type='submit' className={style.actionButton} disabled={pending}>가입하기</button>
-                            <div className={style.error}>{showMessage(state?.message)}</div>
                         </div>
                     </form>
                 </div>

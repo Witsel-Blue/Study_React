@@ -67,6 +67,7 @@
     margin: 12px 0;
 }
 .inputLabel {
+    cursor: text;
     width: 100%;
     display: inline-block;
     position: absolute;
@@ -77,6 +78,9 @@
     height: 56px;
     padding: 8px 8px 0;
     color: rgb(83, 100, 113);
+}
+.inputLabel[for='image'] {
+    cursor: pointer;
 }
 .inputLabel:focus-within {
     color: red;
@@ -95,6 +99,7 @@
 }
 
 .actionButton {
+    cursor: pointer;
     width: 100%;
     height: 50px;
     border-radius: 25px;
