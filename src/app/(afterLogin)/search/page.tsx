@@ -22,7 +22,7 @@ export default async function Search() {
                         <BackButton />
                     </div>
                     <div className={style.formZone}>
-                        <SearchForm q={q} pageName="search" />
+                        <SearchForm q={q} pageName='search' />
                     </div>
                 </div>
                 <Tab />

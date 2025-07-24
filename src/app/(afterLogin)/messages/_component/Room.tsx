@@ -1,10 +1,10 @@
-"use client";
+'use client';
 
-import style from "@/app/(afterLogin)/messages/message.module.css";
-import { faker } from "@faker-js/faker";
-import dayjs from "dayjs";
-import { useRouter } from "next/navigation";
-import relativeTime from "dayjs/plugin/relativeTime";
+import style from '@/app/(afterLogin)/messages/message.module.css';
+import { faker } from '@faker-js/faker';
+import dayjs from 'dayjs';
+import { useRouter } from 'next/navigation';
+import relativeTime from 'dayjs/plugin/relativeTime';
 import 'dayjs/locale/ko';
 
 dayjs.locale('ko');
@@ -28,7 +28,7 @@ export default function Room() {
     return (
         <div className={style.room} onClickCapture={onClick}>
             <div className={style.roomUserImage}>
-                <img src={faker.image.avatar()} alt="" />
+                <img src={faker.image.avatar()} alt='' />
             </div>
             <div className={style.roomChatInfo}>
                 <div className={style.roomUserInfo}>

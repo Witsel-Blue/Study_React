@@ -2,7 +2,7 @@
 
 import style from './signup.module.css';
 import onSubmit from '../_lib/signup';
-import BackButton from '@/app/(beforeLogin)/_component/BackButton';
+import CloseButton from '@/app/(beforeLogin)/_component/CloseButton';
 import { useFormState, useFormStatus } from 'react-dom';
 
 function showMessage(messasge: string | null | undefined) {
@@ -33,7 +33,7 @@ export default function SignupModal() {
             <div className={style.modalBackground}>
                 <div className={style.modal}>
                     <div className={style.modalHeader}>
-                        <BackButton />
+                        <CloseButton />
                         <div>계정을 생성하세요.</div>
                     </div>
                     <form action={formAction} noValidate>

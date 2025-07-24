@@ -1,22 +1,45 @@
 .container {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
     background-color: rgb(var(--background-end-rgb));
-    width: 100dvw;
+    width: 100%;
+    max-width: 1300px;
+    margin: auto;
     height: 100dvh;
+    word-break: keep-all;
 }
+@media screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 16px;
+        text-align: center;
+    }
+    .signup,
+    .login {
+        margin: auto;
+    }
+    .left {
+        width: 80%;
+        max-width: 160px;
+        margin: 0 auto;
+    }
+}
+
 .left {
-    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .right {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
 .right h1 {
     font-weight: bold;
     font-size: 64px;
@@ -35,7 +58,8 @@
 }
 
 .signup {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 40px;
     border-radius: 20px;
     padding: 0 16px;
@@ -51,7 +75,8 @@
     background-color: rgb(26, 140, 216);
 }
 .login {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 40px;
     border-radius: 20px;
     padding: 0 16px;
@@ -64,24 +89,4 @@
 }
 .login:hover {
     background-color: rgba(29,155,240,0.1);
-}
-@media all and (min-width: 1000px) {
-    .container {
-        flex-direction: row;
-        padding: 0;
-    }
-    .left {
-        flex: 1;
-        justify-content: center;
-    }
-    .left img {
-        width: 450px;
-        height: 550px;
-    }
-    .right {
-        justify-content: center;
-    }
-    .right h1 {
-        font-size: 64px;
-    }
 }
