@@ -2,11 +2,20 @@
 
 import style from './modal.module.css';
 import { useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
+
 export default function TweetModal() {
+    const router = useRouter();
     const [content, setContent] = useState();
     const imageRef = useRef<HTMLInputElement>(null);
     const onSubmit = () => { };
-    const onClickClose = () => { }
+    const onClickClose = () => {
+        if (document.referrer && !document.referrer.includes(window.location.hostname)) {
+            router.push('/');
+        } else {
+            router.back();
+        }
+    }
     const onClickButton = () => { }
     const onChangeContent = () => { }
 

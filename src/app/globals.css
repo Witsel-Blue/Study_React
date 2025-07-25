@@ -99,6 +99,9 @@ a {
 button {
     cursor: pointer;
 }
+button:disabled {
+    cursor: initial;
+}
 
 img {
     width: 100%;

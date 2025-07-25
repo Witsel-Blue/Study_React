@@ -5,12 +5,12 @@
     border-radius: 16px;
 }
 .postImageSection.oneImage {
-    max-height: 510px;
+    max-height: 272px;
     background-repeat: no-repeat;
 }
 .postImageSection img {
     border-radius: 16px;
-    max-height: 510px;
+    max-height: 272px;
     width: 100%;
 }
 .postImageSection.twoImage {

@@ -1,35 +1,43 @@
 .container {
-    padding: 12px 0;
     min-height: 66px;
-    display: flex;
-    word-break: break-all;
+    display: grid;
+    grid-template-columns: 40px auto 76px;
+    gap: 8px;
+}
+.container:not(:first-of-type) {
+    margin-top: 12px;
 }
 
 .userLogo {
     width: 40px;
-    margin-right: 12px;
 }
 
 .userLogo, .userLogo img {
     width: 40px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 50%;
 }
 
 .userInfo {
-    flex: 1;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .title {
     font-size: 15px;
     font-weight: bold;
     line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .count {
     color: rgb(83, 100, 113);
     font-size: 13px;
     line-height: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .followButtonSection {
