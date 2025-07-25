@@ -1,5 +1,5 @@
 import { http, HttpResponse, StrictResponse } from 'msw'
-import { faker } from "@faker-js/faker";
+import { faker } from '@faker-js/faker';
 
 function generateDate() {
     const lastWeek = new Date(Date.now());
@@ -12,7 +12,7 @@ function generateDate() {
 const User = [
     { id: 'elonmusk', nickname: 'Elon Musk', image: '/yRsRRjGO.jpg' },
     { id: 'witselblue', nickname: '비첼 블루', image: '/witselblue.png' },
-    { id: faker.internet.username(), nickname: faker.person.fullName(), image: faker.image.avatar() },
+    { id: 'test', nickname: 'test', image: faker.image.avatar() },
 ]
 const Posts = [];
 
@@ -52,14 +52,14 @@ export const handlers = [
             [
                 {
                     postId: cursor + 1,
-                    User: User[3],
+                    User: User[2],
                     content: `${cursor + 1} Z.com is so marvelous. I'm gonna buy that.`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: cursor + 2,
-                    User: User[3],
+                    User: User[2],
                     content: `${cursor + 2} Z.com is so marvelous. I'm gonna buy that.`,
                     Images: [
                         { imageId: 1, link: faker.image.urlPicsumPhotos() },
@@ -69,14 +69,14 @@ export const handlers = [
                 },
                 {
                     postId: cursor + 3,
-                    User: User[3],
+                    User: User[2],
                     content: `${cursor + 3} Z.com is so marvelous. I'm gonna buy that.`,
                     Images: [],
                     createdAt: generateDate(),
                 },
                 {
                     postId: cursor + 4,
-                    User: User[3],
+                    User: User[2],
                     content: `${cursor + 4} Z.com is so marvelous. I'm gonna buy that.`,
                     Images: [
                         { imageId: 1, link: faker.image.urlPicsumPhotos() },
@@ -88,7 +88,7 @@ export const handlers = [
                 },
                 {
                     postId: cursor + 5,
-                    User: User[3],
+                    User: User[2],
                     content: `${cursor + 5} Z.com is so marvelous. I'm gonna buy that.`,
                     Images: [
                         { imageId: 1, link: faker.image.urlPicsumPhotos() },
@@ -105,35 +105,35 @@ export const handlers = [
             [
                 {
                     postId: 1,
-                    User: User[3],
+                    User: User[2],
                     content: `${1} Stop following me. I'm too famous.`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 2,
-                    User: User[3],
+                    User: User[2],
                     content: `${2} Stop following me. I'm too famous.`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 3,
-                    User: User[3],
+                    User: User[2],
                     content: `${3} Stop following me. I'm too famous.`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 4,
-                    User: User[3],
+                    User: User[2],
                     content: `${4} Stop following me. I'm too famous.`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 5,
-                    User: User[3],
+                    User: User[2],
                     content: `${5} Stop following me. I'm too famous.`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
@@ -147,35 +147,35 @@ export const handlers = [
             [
                 {
                     postId: 1,
-                    User: User[3],
+                    User: User[2],
                     content: `${1} 검색결과 ${tag}`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 2,
-                    User: User[3],
+                    User: User[2],
                     content: `${2} 검색결과 ${tag}`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 3,
-                    User: User[3],
+                    User: User[2],
                     content: `${3} 검색결과 ${tag}`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 4,
-                    User: User[3],
+                    User: User[2],
                     content: `${4} 검색결과 ${tag}`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 5,
-                    User: User[3],
+                    User: User[2],
                     content: `${5} 검색결과 ${tag}`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
@@ -189,35 +189,35 @@ export const handlers = [
             [
                 {
                     postId: 1,
-                    User: User[3],
+                    User: User[2],
                     content: `${1} ${userId}의 게시글`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 2,
-                    User: User[3],
+                    User: User[2],
                     content: `${2} ${userId}의 게시글`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 3,
-                    User: User[3],
+                    User: User[2],
                     content: `${3} ${userId}의 게시글`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 4,
-                    User: User[3],
+                    User: User[2],
                     content: `${4} ${userId}의 게시글`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 5,
-                    User: User[3],
+                    User: User[2],
                     content: `${5} ${userId}의 게시글`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
@@ -247,7 +247,7 @@ export const handlers = [
         return HttpResponse.json(
             {
                 postId,
-                User: User[3],
+                User: User[2],
                 content: `${1} 게시글 아이디 ${postId}의 내용`,
                 Images: [
                     { imageId: 1, link: faker.image.urlPicsumPhotos() },
@@ -264,35 +264,35 @@ export const handlers = [
             [
                 {
                     postId: 1,
-                    User: User[3],
+                    User: User[2],
                     content: `${1} 게시글 ${postId}의 답글`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 2,
-                    User: User[3],
+                    User: User[2],
                     content: `${2} 게시글 ${postId}의 답글`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 3,
-                    User: User[3],
+                    User: User[2],
                     content: `${3} 게시글 ${postId}의 답글`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 4,
-                    User: User[3],
+                    User: User[2],
                     content: `${4} 게시글 ${postId}의 답글`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
                 },
                 {
                     postId: 5,
-                    User: User[3],
+                    User: User[2],
                     content: `${5} 게시글 ${postId}의 답글`,
                     Images: [{ imageId: 1, link: faker.image.urlPicsumPhotos() }],
                     createdAt: generateDate(),
