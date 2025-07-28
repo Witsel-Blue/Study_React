@@ -1,8 +1,8 @@
 // Context API
 
-"use client"
+'use client'
 
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useState } from 'react';
 
 export const TabContext = createContext({
     tab: 'rec',
