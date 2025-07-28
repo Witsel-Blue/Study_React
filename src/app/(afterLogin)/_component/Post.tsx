@@ -17,6 +17,7 @@ type Props = {
 }
 export default function Post({ noImage, post }: Props) {
     const target = post;
+    if (!post?.User) return null;
 
     return (
         <PostArticle post={target}>
