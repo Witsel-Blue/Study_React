@@ -141,7 +141,7 @@ export const handlers = [
             ]
         )
     }),
-    http.get(`${baseUrl}/api/:tag`, ({ request, params }) => {
+    http.get(`${baseUrl}/api/search/:tag`, ({ request, params }) => {
         const { tag } = params;
         return HttpResponse.json(
             [

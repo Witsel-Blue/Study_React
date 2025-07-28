@@ -2,17 +2,13 @@ import style from './search.module.css';
 import BackButton from '@/app/(afterLogin)/_component/BackButton';
 import SearchForm from '@/app/(afterLogin)/_component/SearchForm';
 import Tab from '@/app/(afterLogin)/search/_component/Tab';
-import Post from '@/app/(afterLogin)/_component/Post';
-import { headers } from 'next/headers';
+import SearchResult from '@/app/(afterLogin)/search/_component/SearchResult';
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-
-export default async function Search() {
-    const headersList = await headers();
-
-    const rawUrl = headersList.get('x-url') || BASE_URL;
-    const url = new URL(rawUrl);
-    const q = url.searchParams.get('q') || '';
+type Props = {
+    searchParams: { q: string, f?: string, pf?: string };
+}
+export default async function Search({ searchParams }: Props) {
+    const query = await searchParams;
 
     return (
         <main className={style.main}>
@@ -22,16 +18,14 @@ export default async function Search() {
                         <BackButton />
                     </div>
                     <div className={style.formZone}>
-                        <SearchForm q={q} pageName='search' />
+                        <SearchForm q={query.q} f={query.f} pf={query.pf} pageName='search' />
                     </div>
                 </div>
                 <Tab />
             </div>
             <div className={style.list}>
-                {Array.from({ length: 10 }).map((_, i) => (
-                    <Post key={i} />
-                ))}
+                <SearchResult searchParams={query} />
             </div>
         </main>
-    );
+    )
 }
