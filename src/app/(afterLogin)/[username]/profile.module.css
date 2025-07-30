@@ -50,9 +50,12 @@
 }
 
 .userImage {
+    width: 134px;
+    height: 134px;
     display: flex;
     align-items: center;
     border-radius: 50%;
+    background-color: #EFF3F4;
 }
 .userImage img {
     width: 134px;

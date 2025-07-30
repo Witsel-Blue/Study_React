@@ -39,7 +39,7 @@ export default function UserInfo({ username }: Props) {
                     justifyContent: 'center',
                     display: 'flex'
                 }}>
-                    계정이 존재하지 않음
+                    <p>계정이 존재하지 않습니다.</p>
                 </div>
             </>
         )
