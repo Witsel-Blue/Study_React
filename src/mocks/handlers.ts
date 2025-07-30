@@ -20,7 +20,7 @@ const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 export const handlers = [
     http.post(`${baseUrl}/api/login`, () => {
         console.log('로그인');
-        return HttpResponse.json(User[2], {
+        return HttpResponse.json(User[1], {
             headers: {
                 'Set-Cookie': 'connect.sid=msw-cookie;HttpOnly;Path=/'
             }

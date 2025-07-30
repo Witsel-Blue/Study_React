@@ -92,10 +92,6 @@
     grid-template-columns: 2fr 1fr;
 }
 
-.main {
-    height: 200dvh;
-}
-
 .rightSection {
     height: 100%;
     padding-left: 16px;
