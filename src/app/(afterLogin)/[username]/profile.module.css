@@ -56,11 +56,10 @@
     align-items: center;
     border-radius: 50%;
     background-color: #EFF3F4;
+    overflow: hidden;
 }
 .userImage img {
-    width: 134px;
-    border-radius: 50%;
-    object-fit: none;
+    object-fit: cover;
 }
 .userName {
     flex: 1;
