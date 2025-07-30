@@ -28,7 +28,7 @@ export default async function Page(props: Props) {
                 </div>
                 <div className={style.article}>
                     <SinglePost id={id} />
-                    <CommentForm />
+                    <CommentForm id={id} />
                     <div>
                         <Comments id={id} />
                     </div>
