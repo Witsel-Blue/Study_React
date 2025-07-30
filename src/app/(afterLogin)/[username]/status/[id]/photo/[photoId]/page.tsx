@@ -1,6 +1,6 @@
 // modal 배경
 
-import Home from "@/app/(afterLogin)/home/page";
+import Home from '@/app/(afterLogin)/home/page';
 
 type Props = {
     params: {
@@ -9,10 +9,8 @@ type Props = {
         photoId: string
     }
 }
+
 export default function Page({ params }: Props) {
-    params.username
-    params.id
-    params.photoId
     return (
         <Home />
     )

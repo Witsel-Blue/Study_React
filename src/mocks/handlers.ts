@@ -12,7 +12,7 @@ function generateDate() {
 const User = [
     { id: 'elonmusk', nickname: 'Elon Musk', image: '/yRsRRjGO.jpg' },
     { id: 'witselblue', nickname: '비첼 블루', image: '/witselblue.png' },
-    { id: faker.internet.userName(), nickname: faker.person.firstName(), image: faker.image.avatar() },
+    { id: faker.internet.username(), nickname: faker.person.firstName(), image: faker.image.avatar() },
 ]
 const Posts = [];
 
