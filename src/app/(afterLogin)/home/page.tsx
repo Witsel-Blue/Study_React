@@ -16,7 +16,7 @@ export default async function Home() {
     const dehydratedState = dehydrate(queryClient);
 
     return (
-        <main className={style.main}>ß
+        <main className={style.main}>
             <HydrationBoundary state={dehydratedState}>
                 <TabProvider>
                     <Tab />

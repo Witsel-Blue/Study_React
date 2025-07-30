@@ -1,6 +1,5 @@
 'use client'
 
-import styles from '@/app/(afterLogin)/home/home.module.css';
 import { InfiniteData, useInfiniteQuery } from '@tanstack/react-query';
 import { getPostRecommends } from '@/app/(afterLogin)/home/_lib/getPostRecommends';
 import Post from '@/app/(afterLogin)/_component/Post';
