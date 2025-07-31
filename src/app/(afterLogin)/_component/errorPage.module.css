@@ -1,0 +1,25 @@
+.error {
+    min-height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px;
+}
+
+.error button {
+    height: 40px;
+    border-radius: 20px;
+    padding: 0 16px;
+    font-size: 16px;
+    background-color: rgb(29, 155, 240);
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.error button:hover {
+    background-color: rgb(26, 140, 216);
+}

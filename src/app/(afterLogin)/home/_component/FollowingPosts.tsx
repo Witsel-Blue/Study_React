@@ -7,9 +7,10 @@ import Post from '@/app/(afterLogin)/_component/Post';
 import { Post as IPost } from '@/model/Post';
 import { Fragment, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
+import LoadingPage from '@/app/(afterLogin)/_component/LoadingPage';
 
 export default function FollowingPosts() {
-    const { data, fetchNextPage, hasNextPage, isFetching } = useInfiniteQuery<IPost[], Object, InfiniteData<IPost[]>, [_1: string, _2: string], number>({
+    const { data, fetchNextPage, hasNextPage, isFetching, isPending } = useInfiniteQuery<IPost[], Object, InfiniteData<IPost[]>, [_1: string, _2: string], number>({
         queryKey: ['posts', 'followings'],
         queryFn: getFollowingPosts,
         initialPageParam: 0,
@@ -28,6 +29,12 @@ export default function FollowingPosts() {
             !isFetching && hasNextPage && fetchNextPage();
         }
     }, [inView, isFetching, hasNextPage, fetchNextPage]);
+
+    if (isPending) {
+        return (
+            <LoadingPage />
+        )
+    }
 
     return (
         <>
