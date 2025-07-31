@@ -34,10 +34,12 @@
 
 .searchZone {
     display: flex;
+    align-items: center;
     height: 60px;
     border-color: rgb(239, 243, 244);
     border-bottom-width: 1px;
     border-bottom-style: solid;
+    gap: 8px;
 }
 
 .backButton {
@@ -56,14 +58,14 @@
 }
 
 .buttonZone {
-    width: 56px;
     display: flex;
     align-items: center;
+    margin-left: 8px;
 }
 
 .formZone {
     fleX: 1;
-    height: 53px;
+    height: 58px;
 }
 
 .homeFixed {
@@ -86,8 +88,15 @@
     font-size: 16px;
     position: relative;
 }
-.homeTab a:hover {
+.homeTab > div:hover {
     background-color: rgba(15,20,25, 0.1);
+}
+.homeTab span {
+    color: rgb(83, 100, 113);
+}
+.homeTab .active span {
+    font-weight: bold;
+    color: black;
 }
 
 .tabIndicator {

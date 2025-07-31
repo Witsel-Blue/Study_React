@@ -19,10 +19,17 @@ export default function TrendSection() {
     })
 
     const pathname = usePathname();
+
+    const wrapperClassName = [
+        style.trendBg,
+        pathname?.startsWith('/search') ? style.searchPageActive : null,
+    ].filter(Boolean).join(' ');
+
     if (pathname === '/explore') return null;
+
     if (session?.user) {
         return (
-            <div className={style.trendBg}>
+            <div className={wrapperClassName}>
                 <div className={style.trend}>
                     <h3>나를 위한 트렌드</h3>
                     {data?.map((trend) => <Trend trend={trend} key={trend.tagId} />)}
@@ -31,7 +38,7 @@ export default function TrendSection() {
         );
     }
     return (
-        <div className={style.trendBg}>
+        <div className={wrapperClassName}>
             <div className={style.noTrend}>
                 트렌드를 가져올 수 없습니다.
             </div>

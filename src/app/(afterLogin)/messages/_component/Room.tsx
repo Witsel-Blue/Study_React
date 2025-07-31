@@ -32,15 +32,10 @@ export default function Room() {
             </div>
             <div className={style.roomChatInfo}>
                 <div className={style.roomUserInfo}>
-                    <b>{user.nickname}</b>
-                    &nbsp;
-                    <span>@{user.id}</span>
-                    &nbsp;
-                    ·
-                    &nbsp;
-                    <span className={style.postDate}>
-                        {dayjs(user.Messages?.at(-1)?.createdAt).fromNow(true)}
-                    </span>
+                    <p className={style.roomUserName}>{user.nickname}</p>
+                    <p className={style.roomUserId}>@{user.id}</p>
+                    <p className={style.roomDot}>·</p>
+                    <p className={style.roomDate}>{dayjs(user.Messages?.at(-1)?.createdAt).fromNow(true)}</p>
                 </div>
                 <div className={style.roomLastChat}>
                     {user.Messages?.at(-1)?.content}

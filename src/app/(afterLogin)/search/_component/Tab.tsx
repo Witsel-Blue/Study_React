@@ -21,15 +21,17 @@ export default function Tab() {
         router.replace(`/search?${newSearchParams.toString()}`);
     }
 
+    console.log(current);
+
     return (
         <div className={style.homeFixed}>
             <div className={style.homeTab}>
-                <div onClick={onClickHot}>
-                    인기
+                <div onClick={onClickHot} className={current === 'hot' ? style.active : ''}>
+                    <span>인기</span>
                     <div className={style.tabIndicator} hidden={current === 'new'}></div>
                 </div>
-                <div onClick={onClickNew}>
-                    최신
+                <div onClick={onClickNew} className={current === 'new' ? style.active : ''}>
+                    <span>최신</span>
                     <div className={style.tabIndicator} hidden={current === 'hot'}></div>
                 </div>
             </div>

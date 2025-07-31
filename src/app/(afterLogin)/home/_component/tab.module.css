@@ -51,8 +51,15 @@
     cursor: pointer;
     position: relative;
 }
-.homeTab a:hover {
+.homeTab > div:hover {
     background-color: rgba(15,20,25, 0.1);
+}
+.homeTab span {
+    color: rgb(83, 100, 113);
+}
+.homeTab .active span {
+    font-weight: bold;
+    color: black;
 }
 
 .tabIndicator {

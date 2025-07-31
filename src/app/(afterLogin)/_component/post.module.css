@@ -60,9 +60,6 @@
 .postUserName:hover {
     text-decoration: underline;
 }
-.postDot {
-    margin: 0 4px;
-}
 .postUserName {
     font-weight: bold;
 }
@@ -73,13 +70,17 @@
     color: rgb(83, 100, 113);
     font-size: 12px;
 }
+.postDot {
+    margin: 0 4px;
+    color: rgb(83, 100, 113);
+}
 .postDate:hover {
     text-decoration: underline;
 }
 
 .postBody {
-    margin-top: 8px;
     margin-left: calc(40px + 16px);
+    font-size: 14px;
 }
 
 .postWrapper[data-photo='true'] .postMeta {

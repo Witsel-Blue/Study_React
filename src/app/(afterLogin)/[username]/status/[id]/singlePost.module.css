@@ -16,6 +16,7 @@
     border-color: rgb(239, 243, 244);
     border-bottom-width: 1px;
     border-bottom-style: solid;
+    padding: 0 8px;
 }
 
 @media screen and (max-width: 1300px) {
@@ -41,5 +42,5 @@
 }
 
 .article {
-    margin-top: 54px;
+    margin-top: 53px;
 }

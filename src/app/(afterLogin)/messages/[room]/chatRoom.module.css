@@ -18,6 +18,7 @@
     border-color: rgb(239, 243, 244);
     border-bottom-width: 1px;
     border-bottom-style: solid;
+    padding: 0 8px;
 }
 @media screen and (max-width: 1300px) {
     .header  {
@@ -40,7 +41,7 @@
     font-size: 24px;
 }
 .userInfo {
-    margin-top: 54px;
+    margin-top: 53px;
     padding: 20px 16px 60px;
     display: flex;
     align-items: center;
@@ -59,8 +60,17 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    margin-bottom: 8px;
 }
+.userInfo .userNickname {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 8px;
+}
+.userInfo .userId {
+    font-size: 16px;
+    color: rgb(83, 100, 113);
+}
+
 .list {
     padding: 0 15px;
 }
@@ -78,11 +88,12 @@
     align-items: flex-end;
 }
 .myMessage .content {
-    background-color: #0083eb;
+    background-color: rgb(29, 155, 240);
     border-top-left-radius: 22px;
     border-top-right-radius: 22px;
     border-bottom-left-radius: 22px;
     color: white;
+    font-size: 14px;
 }
 .yourMessage {
     display: flex;
@@ -95,9 +106,10 @@
     border-top-right-radius: 22px;
     border-bottom-right-radius: 22px;
     color: black;
+    font-size: 14px;
 }
 .date {
     margin-top: 8px;
     color: #536471;
-    font-size: 12px;
+    font-size: 10px;
 }

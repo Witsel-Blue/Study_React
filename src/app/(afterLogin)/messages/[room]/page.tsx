@@ -29,8 +29,8 @@ export default function ChatRoom() {
             </div>
             <Link href={user.nickname} className={style.userInfo}>
                 <img src={user.image} alt={user.id} />
-                <div><b>{user.nickname}</b></div>
-                <div>@{user.id}</div>
+                <div className={style.userNickname}>{user.nickname}</div>
+                <div className={style.userId}>@{user.id}</div>
             </Link>
             <div className={style.list}>
                 {messages.map((m) => {

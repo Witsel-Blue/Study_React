@@ -18,12 +18,12 @@ export default function Tab() {
         <div className={style.homeFixed}>
             <div className={style.homeText}>홈</div>
             <div className={style.homeTab}>
-                <div onClick={onClickRec}>
-                    추천
+                <div onClick={onClickRec} className={tab === 'rec' ? style.active : ''}>
+                    <span>추천</span>
                     <div className={style.tabIndicator} hidden={tab === 'fol'}></div>
                 </div>
-                <div onClick={onClickFol}>
-                    팔로우 중
+                <div onClick={onClickFol} className={tab === 'fol' ? style.active : ''}>
+                    <span>팔로우 중</span>
                     <div className={style.tabIndicator} hidden={tab === 'rec'}></div>
                 </div>
             </div>

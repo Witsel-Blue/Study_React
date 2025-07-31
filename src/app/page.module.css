@@ -9,6 +9,11 @@
     height: 100dvh;
     word-break: keep-all;
 }
+@media screen and (max-width: 1300px) {
+    .container {
+        padding: 0 24px;
+    }
+}
 @media screen and (max-width: 600px) {
     .container {
         display: flex;

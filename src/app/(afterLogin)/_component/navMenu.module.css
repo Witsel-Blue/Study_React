@@ -10,9 +10,9 @@
 }
 
 .navPill > div {
-    margin-left: 20px;
+    margin-left: 16px;
     margin-right: 16px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 @media screen and (max-width: 1024px) {
