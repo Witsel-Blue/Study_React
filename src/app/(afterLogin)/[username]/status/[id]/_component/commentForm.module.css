@@ -33,7 +33,7 @@
     width: 100%;
     border: none;
     padding: 12px 0;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 24px;
     outline: none;
     resize: none;
@@ -77,7 +77,7 @@
     border: none;
     color: rgb(255, 255, 255);
     font-weight: 700;
-    font-size: 15px;
+    font-size: 16px;
     border-radius: 18px;
     background-color: rgb(29, 155, 240);
     cursor: pointer;

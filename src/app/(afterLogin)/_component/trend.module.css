@@ -8,7 +8,7 @@
 }
 
 .title {
-    font-size: 15px;
+    font-size: 16px;
     font-weight: bold;
     line-height: 20px;
     margin-top: 2px;
@@ -17,7 +17,7 @@
 
 .count {
     color: rgb(83, 100, 113);
-    font-size: 13px;
+    font-size: 12px;
     line-height: 16px;
     font-weight: lighter;
 }

@@ -52,7 +52,7 @@
 }
 .right h3 {
     font-weight: bold;
-    font-size: 17px;
+    font-size: 16px;
     margin-bottom: 20px;
     margin-top: 40px;
 }
@@ -63,7 +63,7 @@
     height: 40px;
     border-radius: 20px;
     padding: 0 16px;
-    font-size: 15px;
+    font-size: 16px;
     background-color: rgb(29, 155, 240);
     color: white;
     border: none;
@@ -80,7 +80,7 @@
     height: 40px;
     border-radius: 20px;
     padding: 0 16px;
-    font-size: 15px;
+    font-size: 16px;
     color: rgb(29, 155, 240);
     border: 1px solid rgb(207, 217, 222);
     display: flex;
