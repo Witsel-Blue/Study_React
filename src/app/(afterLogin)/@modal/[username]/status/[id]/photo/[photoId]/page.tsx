@@ -28,9 +28,9 @@ export default async function Default(props: Props) {
                 <PhotoModalCloseButton />
                 <ImageZone id={id} />
                 <div className={style.commentZone}>
-                    <SinglePost id={id} noImage />
+                    <SinglePost id={id} noImage photo />
                     <CommentForm id={id} />
-                    <Comments id={id} />
+                    <Comments id={id} photo />
                 </div>
             </HydrationBoundary>
         </div>

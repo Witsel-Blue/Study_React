@@ -1,6 +1,4 @@
 .post {
-    display: flex;
-    flex-direction: column;
     padding: 12px 16px;
     border-color: rgb(239, 243, 244);
     border-bottom-width: 1px;
@@ -12,10 +10,6 @@
     background-color: rgba(0, 0, 0, 0.03);
 }
 
-.postWrapper {
-    display: flex;
-    flex-direction: row;
-}
 .postReposted {
     display: flex;
     align-items: center;
@@ -29,8 +23,9 @@
 }
 
 .postUserSection {
-    margin-right: 12px;
-    width: 40px;
+    display: grid;
+    grid-template-columns: 40px auto;
+    gap: 16px;
 }
 
 .postUserImage {
@@ -38,14 +33,14 @@
     display: inline-block;
     width: 40px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 50%;
+    overflow: hidden;
 }
-
 .postShade {
     display: inline-block;
     width: 40px;
     height: 40px;
-    border-radius: 20px;
+    border-radius: 50%;
     position: absolute;
     top: 0;
     left: 0;
@@ -53,34 +48,48 @@
 .postShade:hover {
     background-color: rgba(26, 26, 26, 0.15);
 }
-.postUserImage img {
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-}
 
+.postMeta {
+    display: flex;
+    align-items: center;
+}
+.postUserName:hover {
+    text-decoration: underline;
+}
+.postDot {
+    margin: 0 4px;
+}
 .postUserName {
     font-weight: bold;
 }
-.postUserNick, .postDate {
+.postUserId {
+    margin-left: 8px;
+}
+.postUserId, .postDate {
     color: rgb(83, 100, 113);
+    font-size: 12px;
 }
 .postDate:hover {
     text-decoration: underline;
 }
 
 .postBody {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
-.postUserName:hover {
-    text-decoration: underline;
+    margin-top: 8px;
+    margin-left: calc(40px + 16px);
 }
 
-.postMeta {
-    display: flex;
-    flex-direction: row;
+.postWrapper[data-photo='true'] .postMeta {
+    justify-content: space-between;
+}
+.postWrapper[data-photo='true'] .postUserId {
+    margin-left: 0;
+    display: block;
+}
+.postWrapper[data-photo='true'] .postDot {
+    display: none;
+}
+.postWrapper[data-photo='true'] .postBody {
+    margin-left: 0;
 }
 
 .actionButtons {

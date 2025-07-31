@@ -8,8 +8,9 @@ import { Post as IPost } from '@/model/Post';
 type Props = {
     id: string;
     noImage?: boolean;
+    photo?: boolean;
 }
-export default function SinglePost({ id, noImage }: Props) {
+export default function SinglePost({ id, noImage, photo }: Props) {
     const { data: post, error } = useQuery<IPost, Object, IPost, [_1: string, _2: string]>({
         queryKey: ['posts', id],
         queryFn: getSinglePost,
@@ -33,5 +34,5 @@ export default function SinglePost({ id, noImage }: Props) {
     if (!post) {
         return null;
     }
-    return <Post key={post.postId} post={post} noImage={noImage} />
+    return <Post key={post.postId} post={post} noImage={noImage} photo={photo} />
 }

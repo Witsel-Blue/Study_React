@@ -45,6 +45,12 @@
     overflow: auto;
 }
 
+@media screen and (max-width: 600px) {
+    .commentZone {
+        display: none;
+    }
+}
+
 .closeButton {
     width: 34px;
     height: 34px;

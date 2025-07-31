@@ -14,32 +14,30 @@ dayjs.extend(relativeTime)
 type Props = {
     noImage?: boolean
     post: Post
+    photo?: boolean;
 }
-export default function Post({ noImage, post }: Props) {
+export default function Post({ noImage, post, photo }: Props) {
     const target = post;
     if (!post?.User) return null;
 
     return (
         <PostArticle post={target}>
-            <div className={style.postWrapper}>
+            <div className={style.postWrapper} {...(photo ? { 'data-photo': 'true' } : {})}>
                 <div className={style.postUserSection}>
                     <Link href={`/${target.User.id}`} className={style.postUserImage}>
                         <img src={target.User.image} alt={target.User.nickname} />
                         <div className={style.postShade} />
                     </Link>
-                </div>
-                <div className={style.postBody}>
                     <div className={style.postMeta}>
                         <Link href={`/${target.User.id}`}>
                             <span className={style.postUserName}>{target.User.nickname}</span>
-                            &nbsp;
                             <span className={style.postUserId}>@{target.User.id}</span>
-                            &nbsp;
-                            ·
-                            &nbsp;
                         </Link>
-                        <span className={style.postDate}>{dayjs(target.createdAt).fromNow(true)}</span>
+                        <p className={style.postDot}>·</p>
+                        <p className={style.postDate}>{dayjs(target.createdAt).fromNow(true)}</p>
                     </div>
+                </div>
+                <div className={style.postBody}>
                     <div>{target.content}</div>
                     {!noImage && <div>
                         <PostImages post={target} />
