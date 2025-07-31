@@ -3,7 +3,7 @@ export async function getFollowRecommends() {
         next: {
             tags: ['users', 'followRecommends'],
         },
-        cache: 'no-store',
+        cache: 'force-cache',
     });
 
     if (!res.ok) {
