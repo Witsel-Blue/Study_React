@@ -6,6 +6,11 @@ const nextConfig: NextConfig = {
     devIndicators: {
         buildActivity: false,
         buildActivityPosition: 'bottom-right',
+    },
+    experimental: {
+        serverActions: {
+            bodySizeLimit: '10mb',
+        }
     }
 };
 
